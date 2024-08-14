@@ -151,7 +151,7 @@ import numpy as np
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
 # Load the saved model
-loaded_model = joblib.load('/Users/gabrielaclementedeoliveira/Documents/GitHub/streamlit_app_posture/best_logistic_model.pkl')
+loaded_model = joblib.load('best_logistic_model.pkl')
 
 # Initialize MediaPipe for pose detection
 mp_pose = mp.solutions.pose
