@@ -1,17 +1,14 @@
 import streamlit as st
+import cv2
 import numpy as np
 from PIL import Image
 import mediapipe as mp
-import joblib
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
+import ergonomic_recommendations_streamlit  # Ensure this is correctly imported
 
 # Initialize MediaPipe Pose
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(static_image_mode=True)
 mp_drawing = mp.solutions.drawing_utils
-
-# Load the saved model
-loaded_model = joblib.load('best_logistic_model.pkl')
 
 # Title of the app
 st.title("Ergonomic Recommendations: Set Up Your Workplace")
@@ -146,6 +143,19 @@ if uploaded_file is not None:
         for recommendation in result:
             st.write(recommendation)
 
+import streamlit as st
+import cv2
+import joblib
+import mediapipe as mp
+import numpy as np
+from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
+
+# Load the saved model
+loaded_model = joblib.load('best_logistic_model.pkl')
+
+# Initialize MediaPipe for pose detection
+mp_pose = mp.solutions.pose
+
 # Define function to extract key points
 def extract_keypoints(landmarks):
     keypoints = []
@@ -184,7 +194,7 @@ class PostureVideoTransformer(VideoTransformerBase):
 
         return img
 
-st.subheader("Real-Time Posture Detection")
+st.title("Real-Time Posture Detection")
 
 st.write("This application uses your webcam to detect and alert you about your posture in real-time.")
 
