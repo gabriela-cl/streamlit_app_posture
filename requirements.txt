@@ -2,7 +2,7 @@ streamlit==1.32.0
 streamlit-webrtc==0.47.7
 opencv-python==4.5.5.64  # A stable version of OpenCV
 pillow==10.4.0
-mediapipe==0.9.1  # Adjusted to a version with available wheels
+mediapipe==0.10.14
 joblib==1.4.2
 pandas==2.2.2
 numpy==1.23.5  # Compatible with OpenCV 4.5.x
