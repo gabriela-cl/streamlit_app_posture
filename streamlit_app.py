@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 import mediapipe as mp
+import cv2
 import joblib
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
