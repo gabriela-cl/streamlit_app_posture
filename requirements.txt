@@ -1,12 +1,12 @@
 streamlit==1.32.0
 streamlit-webrtc==0.47.7
-opencv-python==4.10.0
+opencv-python==4.5.3.56  # A stable version of OpenCV
 pillow==10.4.0
-mediapipe==0.10.14
+mediapipe==0.10.0  # Downgraded to a version known to work with OpenCV 4.5.x
 joblib==1.4.2
 pandas==2.2.2
-numpy==1.26.4
-matplotlib==3.9.1.post1
+numpy==1.23.5  # Compatible with OpenCV 4.5.x
+matplotlib==3.7.1  # Compatible with recent versions of numpy and pandas
 matplotlib-inline==0.1.6
 seaborn==0.13.2
 scikit-learn==1.5.1
